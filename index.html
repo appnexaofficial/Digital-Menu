@@ -1,165 +1,533 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width,
+               initial-scale=1.0,
+               maximum-scale=1.0,
+               user-scalable=no">
+
 <title>SaladVerse - Digital Menu</title>
+
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f7f5ef;
-    color: #20251f;
-  }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* FULL SCREEN */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f5ef;
+  color: #20251f;
+}
+
+/* VERTICAL FULL SCREEN MENU */
+.menu {
+  width: 100vw;
+  min-height: 100vh;
+
+  padding: 30px 25px;
+
+  overflow-y: auto;
+}
+
+/* HEADER */
+
+header {
+  background: #183b2a;
+  color: white;
+
+  border-radius: 24px;
+
+  padding: 35px 20px;
+
+  text-align: center;
+
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 52px;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+header p {
+  margin-top: 8px;
+  font-size: 20px;
+  opacity: .9;
+}
+
+/* OFFER */
+
+.offer {
+  background: #e8b94f;
+  color: #183b2a;
+
+  padding: 16px 20px;
+
+  border-radius: 15px;
+
+  font-weight: 700;
+
+  font-size: 20px;
+
+  text-align: center;
+
+  margin-bottom: 28px;
+}
+
+/* SECTION */
+
+section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 32px;
+
+  margin-bottom: 15px;
+
+  border-left: 7px solid #e8b94f;
+
+  padding-left: 12px;
+
+  color: #183b2a;
+}
+
+/* SINGLE COLUMN = VERTICAL */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 15px;
+}
+
+/* CARD */
+
+.card {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 22px;
+
+  box-shadow: 0 5px 18px rgba(0,0,0,.07);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 20px;
+}
+
+.card h3 {
+  font-size: 24px;
+
+  margin-bottom: 7px;
+}
+
+.card p {
+  color: #6c746d;
+
+  font-size: 17px;
+
+  line-height: 1.4;
+}
+
+.price {
+  font-weight: 800;
+
+  font-size: 23px;
+
+  white-space: nowrap;
+
+  color: #183b2a;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+
+  padding: 20px 0 30px;
+
+  color: #697069;
+
+  font-size: 16px;
+}
+
+
+/* =====================================
+   PORTRAIT / VERTICAL SCREEN
+   ===================================== */
+
+@media (orientation: portrait) {
+
   .menu {
-    max-width: 1100px;
-    margin: auto;
-    padding: 32px;
+    width: 100vw;
+    min-height: 100vh;
+
+    padding: 25px 20px;
   }
+
   header {
-    background: #183b2a;
-    color: white;
-    border-radius: 24px;
-    padding: 36px;
-    text-align: center;
-    margin-bottom: 28px;
+    padding: 35px 15px;
   }
-  header h1 { font-size: 48px; letter-spacing: 1px; }
-  header p { margin-top: 8px; font-size: 18px; opacity: .9; }
+
+  header h1 {
+    font-size: 48px;
+  }
+
+  header p {
+    font-size: 19px;
+  }
+
   .offer {
-    background: #e8b94f;
-    color: #183b2a;
-    padding: 14px 20px;
-    border-radius: 14px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 28px;
+    font-size: 19px;
   }
-  section { margin-bottom: 32px; }
+
   .section-title {
-    font-size: 28px;
-    margin-bottom: 16px;
-    border-left: 6px solid #e8b94f;
-    padding-left: 12px;
+    font-size: 30px;
   }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
+
   .card {
-    background: white;
-    border-radius: 18px;
     padding: 20px;
-    box-shadow: 0 5px 18px rgba(0,0,0,.07);
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
   }
-  .card h3 { font-size: 21px; margin-bottom: 6px; }
-  .card p { color: #6c746d; font-size: 14px; line-height: 1.4; }
-  .price { font-weight: 800; font-size: 20px; white-space: nowrap; }
-  footer {
-    text-align: center;
-    padding: 20px 0 8px;
-    color: #697069;
+
+  .card h3 {
+    font-size: 23px;
+  }
+
+  .card p {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 22px;
+  }
+}
+
+
+/* =====================================
+   MOBILE
+   ===================================== */
+
+@media (max-width: 600px) {
+
+  .menu {
+    padding: 18px 15px;
+  }
+
+  header {
+    padding: 28px 12px;
+    border-radius: 20px;
+  }
+
+  header h1 {
+    font-size: 40px;
+  }
+
+  header p {
+    font-size: 16px;
+  }
+
+  .offer {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .card p {
     font-size: 14px;
   }
-  @media (max-width: 700px) {
-    .menu { padding: 18px; }
-    header h1 { font-size: 36px; }
-    .grid { grid-template-columns: 1fr; }
+
+  .price {
+    font-size: 19px;
   }
+}
+
+
+/* HIDE SCROLLBAR */
+
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
+.menu {
+  scrollbar-width: none;
+}
+
 </style>
+
 </head>
+
+
 <body>
+
 <div class="menu">
 
+  <!-- HEADER -->
+
   <header>
+
     <h1>SaladVerse</h1>
+
     <p>Fresh • Healthy • Delicious</p>
+
     <p>Moti Manzil, Mathura</p>
+
   </header>
 
-  <div class="offer">TODAY'S SPECIAL • Fresh & Healthy Choices</div>
+
+  <!-- OFFER -->
+
+  <div class="offer">
+
+    TODAY'S SPECIAL • Fresh & Healthy Choices
+
+  </div>
+
+
+  <!-- WRAPS -->
 
   <section>
-    <h2 class="section-title">Wraps</h2>
+
+    <h2 class="section-title">
+      Wraps
+    </h2>
+
     <div class="grid">
+
       <div class="card">
+
         <div>
+
           <h3>Italian Wrap</h3>
-          <p>Multigrain wrap with fresh, flavourful fillings.</p>
+
+          <p>
+            Multigrain wrap with fresh,
+            flavourful fillings.
+          </p>
+
         </div>
-        <div class="price">₹229</div>
+
+        <div class="price">
+          ₹229
+        </div>
+
       </div>
+
+
       <div class="card">
+
         <div>
+
           <h3>Classic Veg Wrap</h3>
-          <p>Fresh vegetables with a delicious creamy dressing.</p>
+
+          <p>
+            Fresh vegetables with a
+            delicious creamy dressing.
+          </p>
+
         </div>
-        <div class="price">₹199</div>
+
+        <div class="price">
+          ₹199
+        </div>
+
       </div>
+
     </div>
+
   </section>
 
+
+  <!-- SMOOTHIES -->
+
   <section>
-    <h2 class="section-title">Smoothies</h2>
+
+    <h2 class="section-title">
+      Smoothies
+    </h2>
+
     <div class="grid">
+
       <div class="card">
+
         <div>
+
           <h3>Blue Aura</h3>
-          <p>Refreshing smoothie with a vibrant fruity flavour.</p>
+
+          <p>
+            Refreshing smoothie with a
+            vibrant fruity flavour.
+          </p>
+
         </div>
-        <div class="price">₹179</div>
+
+        <div class="price">
+          ₹179
+        </div>
+
       </div>
+
+
       <div class="card">
+
         <div>
+
           <h3>Fresh Berry Smoothie</h3>
-          <p>Fruity, refreshing and freshly blended.</p>
+
+          <p>
+            Fruity, refreshing and
+            freshly blended.
+          </p>
+
         </div>
-        <div class="price">₹189</div>
+
+        <div class="price">
+          ₹189
+        </div>
+
       </div>
+
     </div>
+
   </section>
 
+
+  <!-- SALADS -->
+
   <section>
-    <h2 class="section-title">Salads</h2>
+
+    <h2 class="section-title">
+      Salads
+    </h2>
+
     <div class="grid">
+
       <div class="card">
+
         <div>
+
           <h3>Classic Fresh Salad</h3>
-          <p>Crisp vegetables with a light, fresh dressing.</p>
+
+          <p>
+            Crisp vegetables with a
+            light, fresh dressing.
+          </p>
+
         </div>
-        <div class="price">₹169</div>
+
+        <div class="price">
+          ₹169
+        </div>
+
       </div>
+
+
       <div class="card">
+
         <div>
+
           <h3>Protein Salad</h3>
-          <p>A wholesome and filling healthy bowl.</p>
+
+          <p>
+            A wholesome and filling
+            healthy bowl.
+          </p>
+
         </div>
-        <div class="price">₹249</div>
+
+        <div class="price">
+          ₹249
+        </div>
+
       </div>
+
     </div>
+
   </section>
 
+
+  <!-- DESSERTS -->
+
   <section>
-    <h2 class="section-title">Desserts</h2>
+
+    <h2 class="section-title">
+      Desserts
+    </h2>
+
     <div class="grid">
+
       <div class="card">
+
         <div>
+
           <h3>Healthy Dessert Bowl</h3>
-          <p>A light and delicious sweet finish.</p>
+
+          <p>
+            A light and delicious
+            sweet finish.
+          </p>
+
         </div>
-        <div class="price">₹159</div>
+
+        <div class="price">
+          ₹159
+        </div>
+
       </div>
+
     </div>
+
   </section>
+
+
+  <!-- FOOTER -->
 
   <footer>
+
     SaladVerse • Moti Manzil, Mathura
+
   </footer>
 
 </div>
+
 </body>
+
 </html>
+
+
