@@ -1,570 +1,567 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<title>SaladVerse Digital Menu</title>
-
-<style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html,
-body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-body {
-    background: #f7f5ef;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-/* =====================================
-   PORTRAIT MENU CANVAS
-   ===================================== */
-
-.menu {
-
-    position: absolute;
-
-    width: 100vh;
-    height: 100vw;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%) rotate(90deg);
-
-    transform-origin: center center;
-
-    background: #f7f5ef;
-
-    padding: 35px;
-
-    overflow: hidden;
-
-    display: flex;
-
-    flex-direction: column;
-}
-
-
-/* =====================================
-   HEADER
-   ===================================== */
-
-header {
-
-    background: #183b2a;
-
-    color: white;
-
-    border-radius: 25px;
-
-    padding: 30px;
-
-    text-align: center;
-
-    margin-bottom: 20px;
-
-    flex-shrink: 0;
-}
-
-header h1 {
-
-    font-size: 60px;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-}
-
-header p {
-
-    margin-top: 7px;
-
-    font-size: 21px;
-
-    opacity: .9;
-}
-
-
-/* =====================================
-   OFFER
-   ===================================== */
-
-.offer {
-
-    background: #e8b94f;
-
-    color: #183b2a;
-
-    border-radius: 15px;
-
-    padding: 15px;
-
-    text-align: center;
-
-    font-size: 21px;
-
-    font-weight: 700;
-
-    margin-bottom: 20px;
-
-    flex-shrink: 0;
-}
-
-
-/* =====================================
-   CONTENT
-   ===================================== */
-
-.content {
-
-    flex: 1;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
-
-    min-height: 0;
-}
-
-
-/* =====================================
-   SECTION
-   ===================================== */
-
-section {
-
-    margin-bottom: 10px;
-}
-
-.section-title {
-
-    font-size: 32px;
-
-    color: #183b2a;
-
-    border-left: 7px solid #e8b94f;
-
-    padding-left: 12px;
-
-    margin-bottom: 9px;
-}
-
-
-/* =====================================
-   GRID
-   ===================================== */
-
-.grid {
-
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 10px;
-}
-
-
-/* =====================================
-   CARD
-   ===================================== */
-
-.card {
-
-    background: white;
-
-    border-radius: 16px;
-
-    padding: 15px 20px;
-
-    min-height: 75px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    box-shadow:
-        0 4px 12px rgba(0,0,0,.06);
-}
-
-.card h3 {
-
-    font-size: 23px;
-
-    margin-bottom: 4px;
-}
-
-.card p {
-
-    color: #6c746d;
-
-    font-size: 15px;
-
-    line-height: 1.25;
-}
-
-.price {
-
-    font-size: 23px;
-
-    font-weight: 800;
-
-    color: #183b2a;
-
-    white-space: nowrap;
-}
-
-
-/* =====================================
-   FOOTER
-   ===================================== */
-
-footer {
-
-    text-align: center;
-
-    color: #697069;
-
-    font-size: 15px;
-
-    padding-top: 8px;
-
-    flex-shrink: 0;
-}
-
-
-/* =====================================
-   MOBILE PORTRAIT
-   ===================================== */
-
-@media (max-width: 600px) {
-
-    .menu {
-
-        transform: none;
-
-        position: relative;
-
-        top: auto;
-        left: auto;
-
-        width: 100vw;
-
-        height: 100vh;
-
-        padding: 18px;
-
-        overflow-y: auto;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SaladVerse | Share Your Experience</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    header h1 {
-
-        font-size: 40px;
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f3fff5, #ffffff);
+      color: #18351f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
     }
 
-    header p {
-
-        font-size: 16px;
+    .container {
+      width: 100%;
+      max-width: 430px;
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 30px 24px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+      text-align: center;
     }
 
-    .section-title {
-
-        font-size: 26px;
+    .logo {
+      width: 100px;
+      height: 82px;
+      border-radius: 22px;
+      object-fit: cover;
+      margin-bottom: 15px;
     }
 
-    .card h3 {
-
-        font-size: 19px;
+    .brand {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 7px;
     }
 
-    .card p {
-
-        font-size: 13px;
+    .subtitle {
+      color: #777;
+      font-size: 15px;
+      margin-bottom: 28px;
     }
 
-    .price {
-
-        font-size: 19px;
+    .question {
+      font-size: 21px;
+      font-weight: 700;
+      margin-bottom: 18px;
     }
-}
 
+    .stars {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      margin-bottom: 25px;
+    }
 
-/* =====================================
-   HIDE SCROLLBAR
-   ===================================== */
+    .star {
+      border: none;
+      background: transparent;
+      font-size: 40px;
+      cursor: pointer;
+      color: #d7d7d7;
+      transition: 0.2s;
+      padding: 0;
+    }
 
-::-webkit-scrollbar {
-    display: none;
-}
+    .star:hover,
+    .star.active {
+      color: #f6b800;
+      transform: scale(1.08);
+    }
 
-</style>
+    .rating-text {
+      min-height: 22px;
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 20px;
+    }
 
+    .feedback-box {
+      display: none;
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    .feedback-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 9px;
+    }
+
+    .feedback {
+      background: #f6faf7;
+      border: 1px solid #e3eee5;
+      border-radius: 15px;
+      padding: 16px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #304236;
+      margin-bottom: 12px;
+    }
+
+    .copy-btn {
+      width: 100%;
+      border: none;
+      background: #18351f;
+      color: white;
+      padding: 14px;
+      border-radius: 13px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 18px;
+    }
+
+    .copy-btn:hover {
+      opacity: 0.9;
+    }
+
+    .google-btn,
+    .instagram-btn,
+    .direction-btn {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 13px;
+      margin-top: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .google-btn {
+      background: #fbbc05;
+      color: #222;
+    }
+
+    .instagram-btn {
+      background: #e1306c;
+      color: white;
+    }
+
+    .direction-btn {
+      background: #eef5ef;
+      color: #18351f;
+    }
+
+    .google-btn:hover,
+    .instagram-btn:hover,
+    .direction-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .social-section {
+      border-top: 1px solid #eee;
+      margin-top: 25px;
+      padding-top: 22px;
+    }
+
+    .social-title {
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .social-subtitle {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 13px;
+    }
+
+    .footer {
+      margin-top: 22px;
+      font-size: 11px;
+      color: #aaa;
+    }
+
+    .success {
+      color: #27833c;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      min-height: 18px;
+    }
+
+    @media (max-width: 380px) {
+      .container {
+        padding: 25px 18px;
+      }
+
+      .star {
+        font-size: 34px;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
+  <div class="container">
 
-<div class="menu">
+    <!-- SaladVerse Logo -->
+    <img
+      src="saladverse-logo.jpeg"
+      alt="SaladVerse"
+      class="logo"
+    />
 
+    <div class="brand">SaladVerse</div>
 
-    <!-- HEADER -->
+    <div class="subtitle">
+      Fresh • Healthy • Delicious
+    </div>
 
-    <header>
+    <div class="question">
+      How was your experience?
+    </div>
 
-        <h1>SaladVerse</h1>
+    <!-- Stars -->
+    <div class="stars">
 
-        <p>Fresh • Healthy • Delicious</p>
-
-        <p>Moti Manzil, Mathura</p>
-
-    </header>
-
-
-    <!-- OFFER -->
-
-    <div class="offer">
-
-        TODAY'S SPECIAL • Fresh & Healthy Choices
+      <button class="star" data-rating="1">★</button>
+      <button class="star" data-rating="2">★</button>
+      <button class="star" data-rating="3">★</button>
+      <button class="star" data-rating="4">★</button>
+      <button class="star" data-rating="5">★</button>
 
     </div>
 
-
-    <div class="content">
-
-
-        <!-- WRAPS -->
-
-        <section>
-
-            <h2 class="section-title">
-                Wraps
-            </h2>
-
-            <div class="grid">
-
-                <div class="card">
-
-                    <div>
-
-                        <h3>Italian Wrap</h3>
-
-                        <p>
-                            Multigrain wrap with fresh,
-                            flavourful fillings.
-                        </p>
-
-                    </div>
-
-                    <div class="price">
-                        ₹229
-                    </div>
-
-                </div>
-
-
-                <div class="card">
-
-                    <div>
-
-                        <h3>Classic Veg Wrap</h3>
-
-                        <p>
-                            Fresh vegetables with a
-                            delicious creamy dressing.
-                        </p>
-
-                    </div>
-
-                    <div class="price">
-                        ₹199
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- SMOOTHIES -->
-
-        <section>
-
-            <h2 class="section-title">
-                Smoothies
-            </h2>
-
-            <div class="grid">
-
-                <div class="card">
-
-                    <div>
-
-                        <h3>Blue Aura</h3>
-
-                        <p>
-                            Refreshing smoothie with a
-                            vibrant fruity flavour.
-                        </p>
-
-                    </div>
-
-                    <div class="price">
-                        ₹179
-                    </div>
-
-                </div>
-
-
-                <div class="card">
-
-                    <div>
-
-                        <h3>Fresh Berry Smoothie</h3>
-
-                        <p>
-                            Fruity, refreshing and
-                            freshly blended.
-                        </p>
-
-                    </div>
-
-                    <div class="price">
-                        ₹189
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- SALADS -->
-
-        <section>
-
-            <h2 class="section-title">
-                Salads
-            </h2>
-
-            <div class="grid">
-
-                <div class="card">
-
-                    <div>
-
-                        <h3>Classic Fresh Salad</h3>
-
-                        <p>
-                            Crisp vegetables with a
-                            light, fresh dressing.
-                        </p>
-
-                    </div>
-
-                    <div class="price">
-                        ₹169
-                    </div>
-
-                </div>
-
-
-                <div class="card">
-
-                    <div>
-
-                        <h3>Protein Salad</h3>
-
-                        <p>
-                            A wholesome and filling
-                            healthy bowl.
-                        </p>
-
-                    </div>
-
-                    <div class="price">
-                        ₹249
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- DESSERTS -->
-
-        <section>
-
-            <h2 class="section-title">
-                Desserts
-            </h2>
-
-            <div class="grid">
-
-                <div class="card">
-
-                    <div>
-
-                        <h3>Healthy Dessert Bowl</h3>
-
-                        <p>
-                            A light and delicious
-                            sweet finish.
-                        </p>
-
-                    </div>
-
-                    <div class="price">
-                        ₹159
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
+    <div class="rating-text" id="ratingText">
+      Select your rating
+    </div>
+
+    <!-- Feedback -->
+    <div class="feedback-box" id="feedbackBox">
+
+      <div class="feedback-title">
+        ✨ Suggested feedback
+      </div>
+
+      <div class="feedback" id="feedbackText"></div>
+
+      <div class="success" id="copyStatus"></div>
+
+      <button class="copy-btn" onclick="copyFeedback()">
+        📋 Copy Feedback
+      </button>
+
+      <a
+        id="googleButton"
+        class="google-btn"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ⭐ Review SaladVerse on Google
+      </a>
 
     </div>
 
+    <!-- Social -->
+    <div class="social-section">
 
-    <!-- FOOTER -->
+      <div class="social-title">
+        📸 Stay Connected
+      </div>
 
-    <footer>
+      <div class="social-subtitle">
+        Follow SaladVerse on Instagram
+      </div>
 
-        SaladVerse • Moti Manzil, Mathura
+      <a
+        class="instagram-btn"
+        href="https://www.instagram.com/saladversemathura/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        📸 Follow us on Instagram
+      </a>
 
-    </footer>
+      <a
+        class="direction-btn"
+        href="https://www.google.com/maps/dir//Saladverse,+shop+No.+14,+Moti+Manzil,+NH-2,+Krishna+Nagar,+Mathura,+Uttar+Pradesh+281001/@27.5021824,77.6667136,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x397371d3db74145f:0x8acfebffff6ac37a!2m2!1d77.6551337!2d27.4936007?entry=ttu&g_ep=EgoyMDI2MDkyOC4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        📍 Get Directions
+      </a>
+
+    </div>
+
+    <div class="footer">
+      Thank you for visiting SaladVerse ❤️
+    </div>
+
+  </div>
 
 
-</div>
+  <script>
+
+    /*
+      ==========================================
+      SALADVERSE CONFIGURATION
+      ==========================================
+    */
+
+    const GOOGLE_REVIEW_URL =
+      "https://g.page/r/CXrDav__68-KEBM/review";
+
+
+    /*
+      ==========================================
+      FEEDBACK TEMPLATES
+      ==========================================
+    */
+
+    const feedbacks = {
+
+      1: [
+        "I had a disappointing experience at SaladVerse. There are several areas that could be improved, especially the overall service and experience."
+      ],
+
+      2: [
+        "My experience at SaladVerse was okay, but there is definitely room for improvement. I hope to see better service and experience on my next visit."
+      ],
+
+      3: [
+        "Overall, my experience at SaladVerse was decent. The food was good, although there are a few areas that could be improved."
+      ],
+
+      4: [
+        "Had a great experience at SaladVerse! The food was fresh, the service was good, and I really enjoyed my visit."
+      ],
+
+      5: [
+        "Had a wonderful experience at SaladVerse! The food was fresh and delicious, the presentation was great, and the overall experience was excellent. Would definitely visit again!"
+      ]
+
+    };
+
+
+    /*
+      ==========================================
+      VARIABLES
+      ==========================================
+    */
+
+    let selectedRating = 0;
+    let selectedFeedback = "";
+
+
+    /*
+      ==========================================
+      STAR ELEMENTS
+      ==========================================
+    */
+
+    const stars = document.querySelectorAll(".star");
+
+    const ratingText =
+      document.getElementById("ratingText");
+
+    const feedbackBox =
+      document.getElementById("feedbackBox");
+
+    const feedbackText =
+      document.getElementById("feedbackText");
+
+    const googleButton =
+      document.getElementById("googleButton");
+
+    const copyStatus =
+      document.getElementById("copyStatus");
+
+
+    /*
+      ==========================================
+      STAR CLICK
+      ==========================================
+    */
+
+    stars.forEach(star => {
+
+      star.addEventListener("click", () => {
+
+        selectedRating =
+          Number(star.dataset.rating);
+
+        updateStars();
+
+        generateFeedback();
+
+        saveFeedback();
+
+      });
+
+    });
+
+
+    /*
+      ==========================================
+      UPDATE STARS
+      ==========================================
+    */
+
+    function updateStars() {
+
+      stars.forEach(star => {
+
+        const rating =
+          Number(star.dataset.rating);
+
+        if (rating <= selectedRating) {
+
+          star.classList.add("active");
+
+        } else {
+
+          star.classList.remove("active");
+
+        }
+
+      });
+
+
+      const ratingMessages = {
+
+        1: "We're sorry to hear that 😔",
+        2: "We'll try to do better 🙏",
+        3: "Thanks for your feedback 🙂",
+        4: "Glad you enjoyed it! 😊",
+        5: "We're happy you loved it! ❤️"
+
+      };
+
+      ratingText.textContent =
+        ratingMessages[selectedRating];
+
+    }
+
+
+    /*
+      ==========================================
+      GENERATE FEEDBACK
+      ==========================================
+    */
+
+    function generateFeedback() {
+
+      const options =
+        feedbacks[selectedRating];
+
+      const randomIndex =
+        Math.floor(Math.random() * options.length);
+
+      selectedFeedback =
+        options[randomIndex];
+
+      feedbackText.textContent =
+        selectedFeedback;
+
+      feedbackBox.style.display =
+        "block";
+
+      copyStatus.textContent = "";
+
+      /*
+        Google Review button
+      */
+
+      googleButton.href =
+        GOOGLE_REVIEW_URL;
+
+    }
+
+
+    /*
+      ==========================================
+      COPY FEEDBACK
+      ==========================================
+    */
+
+    async function copyFeedback() {
+
+      try {
+
+        await navigator.clipboard.writeText(
+          selectedFeedback
+        );
+
+        copyStatus.textContent =
+          "✓ Feedback copied! Now paste it on Google.";
+
+      } catch (error) {
+
+        const textarea =
+          document.createElement("textarea");
+
+        textarea.value =
+          selectedFeedback;
+
+        document.body.appendChild(textarea);
+
+        textarea.select();
+
+        document.execCommand("copy");
+
+        textarea.remove();
+
+        copyStatus.textContent =
+          "✓ Feedback copied!";
+
+      }
+
+    }
+
+
+    /*
+      ==========================================
+      BASIC ANALYTICS
+      ==========================================
+    */
+
+    function saveFeedback() {
+
+      const oldData =
+        JSON.parse(
+          localStorage.getItem(
+            "saladverse_feedback"
+          ) || "[]"
+        );
+
+      oldData.push({
+
+        rating: selectedRating,
+
+        feedback: selectedFeedback,
+
+        time: new Date().toISOString()
+
+      });
+
+      localStorage.setItem(
+        "saladverse_feedback",
+        JSON.stringify(oldData)
+      );
+
+    }
+
+  </script>
 
 </body>
-
 </html>
