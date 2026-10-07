@@ -1,54 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SaladVerse - Smoothies</title>
+    <meta charset="UTF-8">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta
+        name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0"
+    >
 
-    html, body {
-      width: 100%;
-      height: 100%;
-      background: #000;
-      overflow: hidden;
-    }
+    <title>SaladVerse - Smoothies Menu</title>
 
-    .menu-screen {
-      width: 100vw;
-      height: 100vh;
+    <style>
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+        /* =========================
+           RESET
+        ========================= */
 
-      background: #000;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .menu-image {
-      width: 100%;
-      height: 100%;
 
-      object-fit: contain;
-      display: block;
-    }
-  </style>
+        /* =========================
+           FULL SCREEN
+        ========================= */
+
+        html,
+        body {
+
+            width: 100%;
+            height: 100%;
+
+            overflow: hidden;
+
+            background: #000;
+
+        }
+
+
+        /* =========================
+           TV SCREEN
+        ========================= */
+
+        .tv-screen {
+
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+
+            background: #000;
+
+        }
+
+
+        /* =========================
+           MENU IMAGE
+        ========================= */
+
+        .menu-image {
+
+            /*
+              Original image is vertical:
+
+              1080 x 1920
+
+              TV is landscape:
+
+              1920 x 1080
+            */
+
+            width: 100vh;
+            height: 100vw;
+
+            display: block;
+
+            object-fit: fill;
+
+            transform: rotate(90deg);
+
+            flex-shrink: 0;
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-  <div class="menu-screen">
-    <img
-      class="menu-image"
-      src="menu1-smoothies.png"
-      alt="SaladVerse Smoothies Menu"
-    >
-  </div>
+
+    <div class="tv-screen">
+
+        <img
+            class="menu-image"
+            src="menu1-smoothies.png"
+            alt="SaladVerse Smoothies Menu"
+        >
+
+    </div>
+
 
 </body>
+
 </html>

@@ -1,54 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SaladVerse - Salads</title>
+    <meta charset="UTF-8">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta
+        name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0"
+    >
 
-    html, body {
-      width: 100%;
-      height: 100%;
-      background: #000;
-      overflow: hidden;
-    }
+    <title>SaladVerse - Salads Menu</title>
 
-    .menu-screen {
-      width: 100vw;
-      height: 100vh;
+    <style>
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      background: #000;
-    }
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+        }
 
-    .menu-image {
-      width: 100%;
-      height: 100%;
+        .tv-screen {
+            width: 100vw;
+            height: 100vh;
 
-      object-fit: contain;
-      display: block;
-    }
-  </style>
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+            background: #000;
+        }
+
+        .menu-image {
+            width: 100vh;
+            height: 100vw;
+
+            display: block;
+
+            object-fit: fill;
+
+            transform: rotate(90deg);
+
+            flex-shrink: 0;
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-  <div class="menu-screen">
-    <img
-      class="menu-image"
-      src="menu2-salads.png"
-      alt="SaladVerse Salads Menu"
-    >
-  </div>
+    <div class="tv-screen">
+
+        <img
+            class="menu-image"
+            src="menu2-salads.png"
+            alt="SaladVerse Salads Menu"
+        >
+
+    </div>
 
 </body>
+
 </html>
